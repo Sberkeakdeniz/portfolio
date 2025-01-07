@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 267 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 260 20% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 260 20% 96%;
+    --muted-foreground: 240 10% 45%;
+    --accent: 267 75% 97%;
+    --accent-foreground: 267 75% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 267 75% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 267 100% 65%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-pink-600;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20;
+}
+
+.button-glow {
+  @apply relative overflow-hidden;
+}
+
+.button-glow::after {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 bg-white opacity-0 transition-opacity duration-300;
+}
+
+.button-glow:hover::after {
+  @apply opacity-20;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(15px, -15px) scale(1.05);
+  }
+  66% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-15px, -15px) scale(0.95);
+  }
+  66% {
+    transform: translate(15px, 15px) scale(1.05);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(10px, -10px) rotate(5deg);
+  }
+  66% {
+    transform: translate(-10px, 10px) rotate(-5deg);
+  }
+}
+
+.animate-float {
+  animation: float 20s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 25s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 30s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: -10s;
+}
+
+.animation-delay-4000 {
+  animation-delay: -20s;
+}
+
+/* Background Patterns */
+.bg-grid-white {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Animations */
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.animate-morph {
+  animation: morph 15s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
