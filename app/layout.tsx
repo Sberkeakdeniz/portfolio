@@ -7,8 +7,8 @@ import Background from "../components/Background"
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Your Name - Software Engineer Portfolio",
-  description: "Professional portfolio of Your Name, a skilled software engineer specializing in web development.",
+  title: "Seralp Berke Akdeniz - Software Engineer Portfolio",
+  description: "Professional portfolio of Seralp Berke Akdeniz, a skilled software engineer specializing in web and mobiledevelopment.",
 }
 
 export default function RootLayout({
