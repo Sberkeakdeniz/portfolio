@@ -20,21 +20,21 @@ export default function Projects() {
       description: "React native app with a futuristic design. You can order a car, and the car will come to you.",
       technologies: ["React Native", "Nativewind(TailwindCSS)", "Google Maps API"],
       link: "https://github.com/Sberkeakdeniz/SBA_Ryde",
-      image: "/images/projects/uber-clone.jpg"
+      image: "/images/projects/uber-clone.png"
     },
     {
       title: "Carepulse patient management system",
       description: "A web-based patient management system for a hospital.",
       technologies: ["Next.js", "TailwindCSS", "Appwrite"],
       link: "#",
-      image: "/images/projects/carepulse.jpg"
+      image: "/images/projects/carepulse.png"
     },
     {
       title: "Student Internship Management System",
       description: "A java Desktop application for managing student internship forms.",
       technologies: ["Java Core", "Swing", "JDBC", "Threads", "SQLite", "Apache POI", "Socket Programming"],
       link: "https://github.com/Sberkeakdeniz/SE360",
-      image: "/images/projects/internship.jpg"
+      image: "/images/projects/internship.pnf"
     },
     {
       title: "Truth or Dare Mobile Game",
