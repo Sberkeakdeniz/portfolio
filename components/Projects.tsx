@@ -42,6 +42,13 @@ export default function Projects() {
       technologies: ["React Native", "Nativewind(TailwindCSS)", "Expo"],
       link: "#",
       image: "/images/projects/truthordare.png"
+    },
+    {
+      title: "AI Integrated Podcast Content Generator",
+      description: "A mobile app with a clean UI and a responsive design. You can generate podcast content with AI, analyze the content and get insights, get tips for improving your podcast and more.",
+      technologies: ["React Native", "Nativewind(TailwindCSS)", "Expo", "OpenAI", "Firebase"],
+      link: "https://apps.apple.com/tr/app/podcastfast/id6740876252?l=tr",
+      image: "/images/projects/podcast.png"
     }
   ]
 
